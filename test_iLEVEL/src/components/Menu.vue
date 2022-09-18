@@ -1,9 +1,9 @@
 <template>
   <div @keyup.down="down" @keyup.up="up" class="dropdown">
-    <button @keyup.enter="choose" @click="showB" class="drop-button">Выпадающее</button>
+    <button  @keyup.enter="choose" @click="showB" class="drop-button">Выпадающее</button>
     <div v-show="show" class="drop-content">
-      <p v-for="(item, index) in numbers">
-        <span v-if="index === selected" style="background-color: aquamarine">{{ item }}</span>
+      <p @click="choose" v-for="(item, index) in numbers">
+        <span  v-if="index === selected" style="background-color: aquamarine">{{ item }}</span>
         <span v-else>{{ item }}</span>
       </p>
 
